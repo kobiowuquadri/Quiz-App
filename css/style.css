@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+:root {
+    --white:whitesmoke;
+    --black:rgba(0, 0, 0, 0.904);
+    --dark_purple:#40128B;
+    --light_purple:#9336B4;
+    --lighter_purple:#DD58D6;
+    --yellow:#FFE79B;
+}
+
+.container {
+    background-image: url('../img/bg-image2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    display: grid;
+    gap: 20px;
+  }
+
+  header h1:first-child{
+    color: var(--lighter_purple);
+    font-size: 1rem;
+  }
+   
+  header h1:nth-child(2){
+    color: var(--white);
+    font-size: 1.2rem;
+  }
+
+  input[type="text"]{
+    border: none;
+    border-bottom:2px solid var(--lighter_purple);
+    padding: 10px;
+    width: 80%;
+    outline: none;
+    margin-bottom: 30px;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--white);
+  }
+
+  input[type="button"], #start{
+    padding: 10px;
+    background-color: var(--lighter_purple);
+    color: var(--white);
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .quiz_rules{
+    display: grid;
+    gap: 20px;
+  }
+  .rules_heading {
+    color: var(--white);
+    padding-top: 10px;
+    font-size: .7rem;
+  }
+  .rules {
+    background-color: var(--light_purple);
+    color: var(--white);
+    padding: 15px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: left;
+  }
+
+  .start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* float: right;
+    margin-top: 20px; */
+  }
+
+  .start a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .active {
+    display: block;
+  }
+
+  
+  
+  
+
+
+
+
+  
+  @media (max-width: 768px) {
+    * {
+        font-size: .9rem;
+    }
+    body{
+        background-color: var(--black);
+    }
+
+    .container {
+      background-size: contain;
+      padding: 20px;
+    }
+    
+  }

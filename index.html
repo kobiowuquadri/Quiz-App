@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App | Home</title>
+    <link rel="shortcut icon" href="./img/bg-image2.jpg" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>QUIZ APP</h1>
+        <h1>PARTICIPANT</h1>
+      </header>
+      <main>
+        <form action="javascript:void()">
+          <p>
+            <input
+              type="text"
+              required
+              placeholder="Enter your name"
+              id="username"
+              name="username"
+            />
+          </p>
+          <p>
+            <input id="submitName" type="button" value="SUBMIT NAME" />
+          </p>
+        </form>
+
+        <div class="quiz_rules">
+          <p class="start">
+            <button id="start" class="animate__animated animate__heartBeat animate__infinite" style="display: none" ><a href="./pages/quiz.html">START</a></button>
+          </p>
+
+          <div class="rules_heading">
+            <h1>QUIZ RULES</h1>
+          </div>
+          <div class="rules">
+            <p>1. IF YOU DON'T GET UP TO 75% OF THE QUESTION, RETRY!</p>
+          </div>
+          <div class="rules">
+            <p>2. YOU CANNOT SKIP ANY QUESTION</p>
+          </div>
+          <div class="rules">
+            <p>3. YOU CANNOT GO BACK TO THE PREVIOUS QUESTION</p>
+          </div>
+          <div class="rules">
+            <p>4. DO NOT CHEAT!</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+    <script>
+      // USERNAME SAVED
+
+let usernameInput = document.getElementById('username')
+let submitName = document.getElementById('submitName')
+let start = document.getElementById('start')
+let greetings = document.getElementById('greetings')
+
+submitName.addEventListener('click', () => {
+  let username = usernameInput.value
+  submitName.style.display = 'none'
+  alert('Your name has been saved!')
+  start.style.display = 'block'
+  console.log(username)
+  usernameInput.readOnly = true
+
+  localStorage.setItem('username', username)
+})
+    </script>
+  </body>
+</html>
