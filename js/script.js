@@ -59,9 +59,9 @@ const quizData = [
     id: 'Question 8',
     question: ' What is the correct HTML for creating a hyperlink?',
     options: [
-      '<a href="http://www.capacitybay.org">CapacityBay</a>',
-      '<a url="https://www.capacitybay.org">CapacityBay</a>',
-      '<a href="https://www.capacitybay.org">CapacityBay</a>'
+      '<a href="http://www.capacitybay.org">GO</a>',
+      '<a url="https://www.capacitybay.org">GO</a>',
+      '<a href="https://www.capacitybay.org">GO</a>'
     ],
     correctAnswer: '<a href="https://www.capacitybay.org">CapacityBay</a>'
   },
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayQuestions = questionCount => {
     const [firstOption, secondOption, thirdOption] =
       quizData[questionCount].options
-    quizQuestions.innerText = `Q${questionCount + 1}.${
+    quizQuestions.innerText = `Q(${questionCount + 1} / ${quizData.length}). ${
       quizData[questionCount].question
     }`
 
