@@ -104,12 +104,9 @@ input[type="button"],
   * {
     font-size: 1rem;
   }
-  body {
-    /* background-color: var(--black); */
-  }
 
   .container {
-    /* background-size: contain; */
+   background-image: url("../img/bg-mobile_image.jpg");
     padding: 20px;
   }
 }
