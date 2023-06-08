@@ -130,7 +130,7 @@ const quizData = [
       '<body bg="background.gif">',
       '<body style="background-image:url(background.gif)">'
     ],
-    correctAnswer: '<body style="background-image:url(background.gif);">'
+    correctAnswer: '<body style="background-image:url(background.gif)">'
   },
   {
     id: 'Question 18',
