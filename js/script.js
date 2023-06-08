@@ -59,11 +59,11 @@ const quizData = [
     id: 'Question 8',
     question: ' What is the correct HTML for creating a hyperlink?',
     options: [
-      '<a href="http://www.capacitybay.org">GO</a>',
-      '<a url="https://www.capacitybay.org">GO</a>',
-      '<a href="https://www.capacitybay.org">GO</a>'
+      '<a href="http://www.go.org">GO</a>',
+      '<a url="https://www.go.org">GO</a>',
+      '<a href="https://www.go.org">GO</a>'
     ],
-    correctAnswer: '<a href="https://www.capacitybay.org">CapacityBay</a>'
+    correctAnswer: '<a href="https://www.go.org">GO</a>'
   },
   {
     id: 'Question 9',
