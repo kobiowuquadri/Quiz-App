@@ -105,11 +105,11 @@ input[type="button"],
     font-size: 1rem;
   }
   body {
-    background-color: var(--black);
+    /* background-color: var(--black); */
   }
 
   .container {
-    background-size: contain;
+    /* background-size: contain; */
     padding: 20px;
   }
 }

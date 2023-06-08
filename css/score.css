@@ -51,11 +51,11 @@ h2 {
 
 @media (max-width: 768px) {
   body {
-    background-color: var(--black);
+    /* background-color: var(--black); */
   }
 
   .score_con {
-    background-size: contain;
+    /* background-size: contain; */
     padding: 20px;
   }
 }
