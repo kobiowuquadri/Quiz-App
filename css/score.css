@@ -51,7 +51,7 @@ h2 {
 
 @media (max-width: 768px) {
   .score_con {
-    background-image: url('../img/bg-mobile_image.jpg');
+    background-image: url("../img/bg-mobile_image.jpg");
     padding: 20px;
   }
 }

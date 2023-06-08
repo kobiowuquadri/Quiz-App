@@ -244,4 +244,3 @@ document.addEventListener('DOMContentLoaded', () => {
 retryBtn.addEventListener('click', () => {
   location.href = 'quiz.html'
 })
-

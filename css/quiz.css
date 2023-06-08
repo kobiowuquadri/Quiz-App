@@ -86,7 +86,7 @@
   }
 
   .quiz_app {
-    background-image: url('../img/bg-mobile_image.jpg');
+    background-image: url("../img/bg-mobile_image.jpg");
     padding: 20px;
   }
 
@@ -95,6 +95,4 @@
     right: 20px;
     padding: 10px;
   }
-  
-
 }
