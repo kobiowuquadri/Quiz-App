@@ -106,7 +106,7 @@ input[type="button"],
   }
 
   .container {
-   background-image: url("../img/bg-mobile_image.jpg");
+    background-image: url("../img/bg-mobile_image.jpg");
     padding: 20px;
   }
 }
