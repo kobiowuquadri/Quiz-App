@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App | Score Page</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/score.css" />
+  </head>
+  <body>
+    <div class="score_con">
+      <h1 id="score"></h1>
+      <h2
+        id="content"
+        class="animate__animated animate__heartBeat animate__infinite"
+      ></h2>
+
+      <div class="retry_btn_con">
+        <button class="retry_btn" data-retry_btn style="display: none">
+          Retry
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const retryBtn = document.querySelector(".retry_btn");
+      let content = document.getElementById("content");
+      let score = document.getElementById("score");
+      let userScore = sessionStorage.getItem("score");
+
+      if (userScore >= 70) {
+        content.innerHTML = `Congratulation! You Passed!`;
+        score.innerHTML = `${userScore}%`;
+      } else {
+        retryBtn.style.display = "block";
+        content.innerHTML = `You Failed, Try Again!`;
+        score.innerHTML = `${userScore}%`;
+      }
+    </script>
+    <script src="../js/script.js"></script>
+  </body>
 </html>

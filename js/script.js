@@ -153,82 +153,94 @@ const quizData = [
   }
 ]
 
-
 document.addEventListener('DOMContentLoaded', () => {
   // Variables (quiz)
-  const quizQuestions = document.querySelector('[data-quiz_questions]');
-  const quizOptions = document.querySelector('[data-quiz_options]');
-  const nextBtn = document.querySelector('[data-next_btn]');
-  const retryBtn = document.querySelector('[data-retry_btn]');
-  const quizScore = document.querySelector('[data-quiz_score]');
+  const quizQuestions = document.querySelector('[data-quiz_questions]')
+  const nextBtn = document.querySelector('[data-next_btn]')
+  const retryBtn = document.querySelector('.retry_btn')
+  const submitBtn = document.querySelector('.submit_btn')
   const option1 = document.getElementById('option1')
   const option2 = document.getElementById('option2')
   const option3 = document.getElementById('option3')
 
   // Initialising score and questions index in the array
-  let score = 0;
-  let questionIndex = 0;
+  let score = 0
+  let questionIndex = 0
 
   // Display questions when the window is loaded
   window.onload = () => {
-    displayQuestions(questionIndex);
-  };
+    displayQuestions(questionIndex)
+  }
 
-  const displayQuestions = (questionCount) => {
-    if (!quizQuestions || !quizOptions) {
-      console.error("Quiz question or options element not found.");
-      return;
-    }
+  const displayQuestions = questionCount => {
+    const [firstOption, secondOption, thirdOption] =
+      quizData[questionCount].options
+    quizQuestions.innerText = `Q${questionCount + 1}.${
+      quizData[questionCount].question
+    }`
 
-    const [firstOption, secondOption, thirdOption] = quizData[questionCount].options;
-    quizQuestions.innerText = `Q${questionCount + 1}.${quizData[questionCount].question}`;
-     
     option1.innerText = `${firstOption}`
     option2.innerText = `${secondOption}`
     option3.innerText = `${thirdOption}`
 
-
-
-    toggleActive();
-  };
+    toggleActive()
+    toggleButtons(questionCount)
+  }
 
   const toggleActive = () => {
     const option = document.querySelectorAll('li.option')
     for (let i = 0; i < option.length; i++) {
       option[i].onclick = () => {
-        for (let i = 0; i < option.length; i++) {
-          if (option[i].classList.contains("active")) {
-            option[i].classList.remove("active")
+        for (let j = 0; j < option.length; j++) {
+          if (option[j].classList.contains('active')) {
+            option[j].classList.remove('active')
           }
         }
-        option[i].classList.add("active")
+        option[i].classList.add('active')
       }
       option[i].classList.remove('active')
     }
   }
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (!quizQuestions || !quizOptions) {
-        console.error("Quiz question or options element not found.");
-        return;
-      }
-
-      if (questionIndex === quizQuestions.length - 1) {
-        location.href = "score.html";
-        return;
-      }
-
-      const userAnswer = document.querySelector(".option.active");
-      if (userAnswer && userAnswer.innerHTML === quizData[questionIndex].correctAnswer) {
-        score += 5;
-        sessionStorage.setItem("score", score);
-      }
-
-      questionIndex++;
-      displayQuestions(questionIndex);
-    });
-  } else {
-    console.error("Next button element not found.");
+  const toggleButtons = questionCount => {
+    if (questionCount === quizData.length - 1) {
+      nextBtn.style.display = 'none'
+      submitBtn.style.display = 'block'
+    } else {
+      nextBtn.style.display = 'block'
+      submitBtn.style.display = 'none'
+    }
   }
-});
+
+  nextBtn.addEventListener('click', () => {
+    const userAnswer = document.querySelector('.option.active')
+    if (
+      userAnswer &&
+      userAnswer.innerText === quizData[questionIndex].correctAnswer
+    ) {
+      score += 5
+      sessionStorage.setItem('score', score)
+    }
+
+    questionIndex++
+    displayQuestions(questionIndex)
+  })
+
+  submitBtn.addEventListener('click', () => {
+    const userAnswer = document.querySelector('.option.active')
+    if (
+      userAnswer &&
+      userAnswer.innerText === quizData[questionIndex].correctAnswer
+    ) {
+      score += 5
+      sessionStorage.setItem('score', score)
+    }
+
+    // Redirect to the score page
+    location.href = 'score.html'
+  })
+})
+
+retryBtn.addEventListener('click', () => {
+  location.href = 'quiz.html'
+})

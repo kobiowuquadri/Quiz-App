@@ -14,7 +14,7 @@
   --yellow: #ffe79b;
 }
 
-.quiz_app {
+.score_con {
   background-image: url("../img/bg-image2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,41 +27,19 @@
   text-align: center;
 }
 
-#greetings {
-  font-size: 0.7rem;
-  color: var(--white);
-  border: 2px solid var(--lighter_purple);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.quiz_questions {
+h1 {
   color: var(--lighter_purple);
-  padding: 20px;
-  width: 75%;
-}
-.quiz_options ul {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  justify-content: left;
+  font-size: 3rem;
 }
 
-.option {
-  border: 2px solid var(--dark_purple);
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
+h2 {
   color: var(--white);
-}
-.option.active {
-  background-color: var(--dark_purple);
+  font-size: 1.5rem;
+  padding: 20px;
 }
 
-.next_btn,
-.submit_btn {
-  padding: 1rem 2rem;
+.retry_btn {
+  padding: 1rem 3rem;
   background-color: var(--dark_purple);
   color: var(--white);
   border: none;
@@ -72,14 +50,11 @@
 }
 
 @media (max-width: 768px) {
-  * {
-    font-size: 0.9rem;
-  }
   body {
     background-color: var(--black);
   }
 
-  .quiz_app {
+  .score_con {
     background-size: contain;
     padding: 20px;
   }
