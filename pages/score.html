@@ -40,6 +40,9 @@
         content.innerHTML = `You Failed, Try Again!`;
         score.innerHTML = `${userScore}%`;
       }
+      retryBtn.addEventListener('click', () => {
+        location.href = './quiz.html'
+      })
     </script>
     <script src="../js/script.js"></script>
   </body>

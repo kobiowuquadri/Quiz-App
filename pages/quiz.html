@@ -42,7 +42,9 @@
 
     <script>
       let greetings = document.getElementById("greetings");
-      let storedUsername = localStorage.getItem("username"); // Retrieve username from local storage
+
+      // Retrieve username from local storage with key name of username
+      let storedUsername = localStorage.getItem("username"); 
 
       if (storedUsername) {
         let h1 = document.createElement("h1");

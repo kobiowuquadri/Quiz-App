@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Variables (quiz)
   const quizQuestions = document.querySelector('[data-quiz_questions]')
   const nextBtn = document.querySelector('[data-next_btn]')
-  const retryBtn = document.querySelector('.retry_btn')
   const submitBtn = document.querySelector('.submit_btn')
   const option1 = document.getElementById('option1')
   const option2 = document.getElementById('option2')
@@ -239,8 +238,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Redirect to the score page
     location.href = 'score.html'
   })
-})
-
-retryBtn.addEventListener('click', () => {
-  location.href = 'quiz.html'
 })
