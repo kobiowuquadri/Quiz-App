@@ -1,5 +1,4 @@
 
-```markdown
 # Quiz App
 
 Welcome to the Quiz App! Test your knowledge with a fun and interactive quiz experience.
@@ -34,7 +33,6 @@ To run the Quiz App locally, follow these steps:
 git clone https://github.com/kobiowuquadri/Quiz-App.git
 cd Quiz-App
 ```
-
 Open the `index.html` file in your browser.
 
 ## Technologies Used
