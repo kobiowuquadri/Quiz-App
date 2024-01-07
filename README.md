@@ -1,3 +1,5 @@
+
+```markdown
 # Quiz App
 
 Welcome to the Quiz App! Test your knowledge with a fun and interactive quiz experience.
@@ -31,18 +33,25 @@ To run the Quiz App locally, follow these steps:
 ```bash
 git clone https://github.com/kobiowuquadri/Quiz-App.git
 cd Quiz-App
+```
 
-Open the index.html file in your browser.
+Open the `index.html` file in your browser.
 
-Technologies Used
-HTML
-CSS
-JavaScript
-Contributions
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## Contributions
+
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-Author
-Kobiowu Quadri
+## Author
 
-License
-This project is licensed under the MIT License.
+[Kobiowu Quadri](https://github.com/kobiowuquadri)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+```
